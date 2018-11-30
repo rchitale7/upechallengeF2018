@@ -46,6 +46,10 @@ success = False
 
 #while the game status is not finished
 while(stat != "FINISHED"):
+
+    if(stat == "NONE" or stat == "GAME_OVER"):
+        print("Error, game quit prematurely")
+        exit()
     currPos = x2["current_location"]
     currPosX = currPos[0];
     currPosY = currPos[1];
